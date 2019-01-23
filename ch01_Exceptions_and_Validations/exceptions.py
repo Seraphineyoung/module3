@@ -79,6 +79,12 @@ finally:
     
 try:
     f = open('testfile.txt')
+    if f.name == 'testfile.txt':
+            raise Exception
+
+except Exception as e:
+    
+    print(e,'file name are the same')
     
     
     
