@@ -46,44 +46,52 @@
     
   ################################# Task 6 ################################  
     
-print('***choice***') 
-print('1.Display my name') 
-print('2. Display my age')
-print('3. Display my city')
+#print('***choice***') 
+#print('1.Display my name') 
+#print('2. Display my age')
+#print('3. Display my city')
+#
+#
+#choice = 0
+#
+##this puts it in a loop
+#
+#while True:
+#    try:
+#       while choice < 1 or choice > 3:
+#           choice = int(input('what is your choice again? '))
+#           
+#           if choice == 1:
+#               print('Ms Wu')
+#        
+#           elif choice == 2:
+#               print('5 years old')
+#        
+#           elif choice == 3:
+#               print('London')      
+#       break
+#    except ValueError:
+#         print('Please enter a number')
+#         
 
-
-choice = 0
-
-#this puts it in a loop
-
-while True:
-    try:
-
-       while choice < 1 or choice > 3:
-           choice = int(input('what is your choice again? '))
-           
-           if choice == 1:
-               print('Ms Wu')
-        
+  
+ ################################# Task 7 ################################        
     
-           elif choice == 2:
-               print('5 years old')
-        
-    
-           elif choice == 3:
-               print('London')
-                
+class Spam(object):
+    def __init__(self,description,value):
+        if not description or value <= 0:
+           raise ValueError 
            
-           
-       break
-   
-    except ValueError:
-         print('Please enter a number')
-         
-#    else:
+               
+        self.description = description
+        self.value = value
         
-    
 
+s = Spam('s',5)
+
+p = Spam('gey',-1)
+
+print(p.value)
     
             
 
