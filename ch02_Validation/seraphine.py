@@ -82,18 +82,33 @@ class Spam(object):
         if not description or value <= 0:
            raise ValueError 
            
-               
         self.description = description
         self.value = value
         
 
 s = Spam('s',5)
 
-p = Spam('gey',-1)
+p = Spam('b',1)
 
 print(p.value)
-    
-            
+
+
+
+class Spam1 (object):
+    def __init__(self,description,value):
+        assert description != ''
+        assert value > 0
+        self.description = description
+        self.value = value
+
+
+
+seraphine = Spam1('girl',1)
+
+#this is goint to raise an assertion error
+#seraphine = Spam1('',-1)
+
+print(seraphine.description)
 
 
 
